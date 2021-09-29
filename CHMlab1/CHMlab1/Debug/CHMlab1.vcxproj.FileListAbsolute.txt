@@ -1,3 +1,6 @@
 C:\Users\user\Desktop\programs\CHMlab1\CHMlab1\Debug\CHMlab1.vcxprojAssemblyReference.cache
 C:\Users\user\Desktop\programs\CHMlab1\CHMlab1\Debug\CHMlab1.MyForm.resources
 C:\Users\user\Desktop\programs\CHMlab1\CHMlab1\Debug\CHMlab1.vcxproj.GenerateResource.cache
+C:\Users\user\tets1\CHMlab1\CHMlab1\Debug\CHMlab1.vcxprojAssemblyReference.cache
+C:\Users\user\tets1\CHMlab1\CHMlab1\Debug\CHMlab1.MyForm.resources
+C:\Users\user\tets1\CHMlab1\CHMlab1\Debug\CHMlab1.vcxproj.GenerateResource.cache
