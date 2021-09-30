@@ -1,4 +1,6 @@
 #pragma once
+#include <stdlib.h>
+#include <math.h>
 
 namespace CHMlab1 {
 
@@ -421,7 +423,7 @@ namespace CHMlab1 {
 
 				switch (comboBox1->SelectedIndex)
 				{
-				case 0:
+				case 0: //בוח ֻֿ
 				{
 					chart1->Series["Series1"]->Points->Clear();
 					double step = System::Convert::ToDouble(textBox1->Text);
@@ -460,8 +462,10 @@ namespace CHMlab1 {
 					}
 					break;
 				}
-				case 1:
+				case 1:   //ס ֻֿ
 				{
+					int c1 = 0;
+					int c2 = 0;
 					chart1->Series["Series1"]->Points->Clear();
 					double step = System::Convert::ToDouble(textBox1->Text);
 					double x0 = 0.0;
@@ -487,6 +491,10 @@ namespace CHMlab1 {
 							dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
 							dataGridView1->Rows[i]->Cells[2]->Value = v0.ToString();
 							dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+							dataGridView1->Rows[i]->Cells[9]->Value =(x0*x0/2.0).ToString();
+							dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
+							dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
+
 							//half step
 							double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0, k4_4 = 0.0;
 							k1_1 = FuncDU(x0, v0);
@@ -497,6 +505,30 @@ namespace CHMlab1 {
 							v1 = v1 + step / 12.0 * (k1_1 + k2_2 + k3_3 + k4_4);
 							dataGridView1->Rows[i]->Cells[3]->Value = v1.ToString();
 							dataGridView1->Rows[i]->Cells[4]->Value = (v0 - v1).ToString();
+
+							// check error
+							double s;
+							s = (v1 - v0) / 15.0;
+							double eps = System::Convert::ToDouble(textBox4->Text);
+							double epsMin = eps / 15.0;
+							if (fabs(s) < epsMin)
+							{
+								step = 2 * step;
+								c1++;
+							}
+							if (fabs(s) > eps)
+							{
+								step = step / 2.0;
+								if (i > 0)
+									i--;
+								c2++;
+							}
+							double olp;
+							olp = s * 16.0;
+							//round(olp * 100000000000) / 1000000000000;
+							dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+							dataGridView1->Rows[i]->Cells[10]->Value = (fabs(x0*x0/2.0-v0)).ToString();
+
 						}
 					}
 					break;
@@ -521,8 +553,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	double x0 = 0.0;
 	double v0 = System::Convert::ToDouble(textBox2->Text);
 	int Numstep = System::Convert::ToDouble(textBox3->Text);
+	double rightBord = System::Convert::ToDouble(textBox5->Text);
 	for (int i = 0; i < Numstep; i++)
 	{
+		if (x0 < rightBord)
 		chart1->Series["Series2"]->Points->AddXY(x0, v0);
 		x0 += step;
 		v0 += x0 * x0 / 2.0;
