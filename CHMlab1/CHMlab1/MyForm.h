@@ -418,7 +418,7 @@ namespace CHMlab1 {
 		{ 
 		case 0:
 		{
-			if (comboBox1->SelectedIndex != -1 && textBox1->Text != "" && textBox2->Text != "")
+			if (comboBox1->SelectedIndex != -1 && textBox1->Text != "" && textBox2->Text != ""&& comboBox2->SelectedIndex != -1)
 			{
 
 				switch (comboBox1->SelectedIndex)
@@ -519,8 +519,8 @@ namespace CHMlab1 {
 							if (fabs(s) > eps)
 							{
 								step = step / 2.0;
-								if (i > 0)
-									i--;
+								//if (i > 0)
+									//i--;
 								c2++;
 							}
 							double olp;
@@ -535,6 +535,7 @@ namespace CHMlab1 {
 				}
 				}
 			}
+            else MessageBox::Show("выберите тип задачи и нужен ли контроль локальной погрешности");
 		}
 		case 1:     //main 1
 		{
@@ -549,6 +550,7 @@ namespace CHMlab1 {
 	
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	chart1->Series["Series2"]->Points->Clear();
 	double step = System::Convert::ToDouble(textBox1->Text);
 	double x0 = 0.0;
 	double v0 = System::Convert::ToDouble(textBox2->Text);
