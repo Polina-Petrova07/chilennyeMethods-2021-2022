@@ -36,7 +36,7 @@ namespace CHMlab1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+
 	protected:
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
@@ -68,6 +68,7 @@ namespace CHMlab1 {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::ComboBox^ comboBox2;
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
 
 	private:
 		/// <summary>
@@ -83,9 +84,9 @@ namespace CHMlab1 {
 		void InitializeComponent(void)
 		{
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -115,43 +116,11 @@ namespace CHMlab1 {
 			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// chart1
-			// 
-			this->chart1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->chart1->BackColor = System::Drawing::Color::Silver;
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
-			this->chart1->ImeMode = System::Windows::Forms::ImeMode::On;
-			this->chart1->IsSoftShadows = false;
-			this->chart1->Location = System::Drawing::Point(416, 189);
-			this->chart1->Name = L"chart1";
-			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::None;
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series1->LegendText = L"численное решение";
-			series1->MarkerBorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			series1->MarkerColor = System::Drawing::Color::RoyalBlue;
-			series1->MarkerSize = 7;
-			series1->Name = L"Series1";
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series2->MarkerColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			series2->Name = L"Series2";
-			series2->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			this->chart1->Series->Add(series1);
-			this->chart1->Series->Add(series2);
-			this->chart1->Size = System::Drawing::Size(627, 363);
-			this->chart1->TabIndex = 0;
-			this->chart1->Text = L"chart1";
 			// 
 			// button1
 			// 
@@ -411,20 +380,52 @@ namespace CHMlab1 {
 			this->Column11->Name = L"Column11";
 			this->Column11->ReadOnly = true;
 			// 
+			// chart1
+			// 
+			this->chart1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			chartArea1->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea1);
+			legend1->Docking = System::Windows::Forms::DataVisualization::Charting::Docking::Bottom;
+			legend1->Name = L"Legend1";
+			this->chart1->Legends->Add(legend1);
+			this->chart1->Location = System::Drawing::Point(417, 189);
+			this->chart1->Name = L"chart1";
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series1->Color = System::Drawing::Color::Navy;
+			series1->Legend = L"Legend1";
+			series1->LegendText = L"численное решение";
+			series1->MarkerColor = System::Drawing::SystemColors::GrayText;
+			series1->Name = L"Series1";
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Color = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			series2->Legend = L"Legend1";
+			series2->LegendText = L"истиное решение";
+			series2->MarkerColor = System::Drawing::Color::Yellow;
+			series2->Name = L"Series2";
+			this->chart1->Series->Add(series1);
+			this->chart1->Series->Add(series2);
+			this->chart1->Size = System::Drawing::Size(626, 363);
+			this->chart1->TabIndex = 4;
+			this->chart1->Text = L"chart1";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1044, 557);
+			this->Controls->Add(this->chart1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->groupBox1);
-			this->Controls->Add(this->chart1);
 			this->Name = L"MyForm";
 			this->Text = L"Команда 2. ЛР 1. Вариант 2";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -443,14 +444,12 @@ namespace CHMlab1 {
 		double x0 = 0.0;
 		x0Pr = x0;
 		v0Pr = v0;
-
 		switch (comboBox2->SelectedIndex)//what task
 		{
 		case 0:   //test task
 		{
-			if (comboBox1->SelectedIndex != -1 && textBox1->Text != "" && textBox2->Text != "" && comboBox2->SelectedIndex != -1)
+			if (comboBox1->SelectedIndex != -1  && comboBox2->SelectedIndex != -1)
 			{
-				chart1->Series["Series1"]->Color.Lime;
 				switch (comboBox1->SelectedIndex)
 				{
 				case 0: //без ЛП
@@ -471,7 +470,9 @@ namespace CHMlab1 {
 						k4 = FuncDU(x0 + step, v0 + step * k3);
 						chart1->Series["Series1"]->Points->AddXY(x0, v0);
 						x0 += step;
-						v0 += step / 6.0 * (k1 + k2 + k3 + k4);
+						double k = step / 6.0;
+						v0 += k * (k1 + 2 * k2 + 2 * k3 + k4);
+						//table
 						dataGridView1->Rows->Add(1);
 						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
 						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
@@ -485,7 +486,7 @@ namespace CHMlab1 {
 						k3_3 = FuncDU(x0 + step / 4.0, v0 + step / 4.0 * k2_2);
 						k4_4 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k3_3);
 						double v1 = v0;
-						v1 = v1 + step / 12.0 * (k1_1 + k2_2 + k3_3 + k4_4);
+						v1 = v1 + step / 12.0 * (k1_1 + 2*k2_2 + 2*k3_3 + k4_4);
 						dataGridView1->Rows[i]->Cells[3]->Value = v1.ToString();
 						dataGridView1->Rows[i]->Cells[4]->Value = (v0 - v1).ToString();
 
@@ -536,13 +537,16 @@ namespace CHMlab1 {
 					chart1->Series["Series1"]->Points->Clear();
 					int c1 = 0;
 					int c2 = 0;
-					int i = 0;
+					int i = 1;
 					bool f = true;
-					double v1 = v0;
+					double vH = v0;
+					double xH = x0;
+					double s;
 					dataGridView1->Rows->Add(1);
 					dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
 					dataGridView1->Rows[0]->Cells[2]->Value = v0.ToString();
 					dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
+					chart1->Series["Series1"]->Points->AddXY(x0, v0);
 					while (f == true)
 					{
 						double k1 = 0.0, k2 = 0.0, k3 = 0.0, k4 = 0.0;
@@ -550,14 +554,66 @@ namespace CHMlab1 {
 						k2 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k1);
 						k3 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k2);
 						k4 = FuncDU(x0 + step, v0 + step * k3);
+						v0 += step / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4);
 
 						//half step
-						double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0, k4_4 = 0.0;
-						k1_1 = FuncDU(x0, v0);
-						k2_2 = FuncDU(x0 + step / 4.0, v0 + step / 4.0 * k1_1);
-						k3_3 = FuncDU(x0 + step / 4.0, v0 + step / 4.0 * k2_2);
-						k4_4 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k3_3);
-						v1 = v1 + step / 12.0 * (k1_1 + k2_2 + k3_3 + k4_4);
+						for (int j = 0; j < 2; j++) 
+						{
+							double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0, k4_4 = 0.0;
+							k1_1 = FuncDU(xH, vH);
+							k2_2 = FuncDU(xH + step / 4.0, vH + step / 4.0 * k1_1);
+							k3_3 = FuncDU(xH + step / 4.0, vH + step / 4.0 * k2_2);
+							k4_4 = FuncDU(xH + step / 2.0, vH + step / 2.0 * k3_3);
+							xH = xH + step / 2.0;
+							vH = vH + step / 12.0 * (k1_1 + 2 * k2_2 + 2 * k3_3 + k4_4);
+						}
+						// check error
+						s = (vH - v0) / 15.0;
+						double eps = System::Convert::ToDouble(textBox4->Text);
+						double epsMin = eps / 17.0;
+						if (fabs(s) > epsMin && fabs(s) < eps)
+						{
+							chart1->Series["Series1"]->Points->AddXY(x0, v0);
+							x0 += step;
+							//v0 += step / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4);
+						}
+						if (fabs(s) < epsMin)
+						{
+							chart1->Series["Series1"]->Points->AddXY(x0, v0);
+							step = 2 * step;
+							x0 += step;
+							c1++;
+						}
+						if (fabs(s) > eps)
+						{
+							step = step / 2.0;
+							x0 = x0Pr;
+							v0 = v0Pr;
+							c2++;
+						}
+						double olp;
+						olp = s * 16.0;
+
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v0.ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						dataGridView1->Rows[i]->Cells[9]->Value = (x0 * x0 / 2.0).ToString();
+						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
+						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						dataGridView1->Rows[i]->Cells[10]->Value = (fabs(x0 * x0 / 2.0 - v0)).ToString();
+						x0Pr = x0;
+						v0Pr = v0;
+						i++;
+						if (x0 >= rightBord - eps || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(x0, v0);
+						}
+
 					}
 					/*int c1 = 0;
 					int c2 = 0;
@@ -573,7 +629,7 @@ namespace CHMlab1 {
 							k4 = FuncDU(x0 + step, v0 + step * k3);
 							//chart1->Series["Series1"]->Points->AddXY(x0, v0);
 							x0 += step;
-							v0 += step / 6.0 * (k1 + k2 + k3 + k4);
+							v0 += step / 6.0 * (k1 + 2*k2 + 2*k3 + k4);
 
 							//table
 							dataGridView1->Rows->Add(1);
@@ -659,14 +715,14 @@ namespace CHMlab1 {
 		int i = 0;
 		while (f == true)
 		{
-			v0 = x0 * x0 / 2.0;
 			chart1->Series["Series2"]->Points->AddXY(x0, v0);
 			x0 += step;
+			v0 = exp(x0);
 			i++;
 			if (x0 >= rightBord - step || i == Numstep)
 			{
 				f = false;
-				chart1->Series["Series1"]->Points->AddXY(x0, v0);
+				chart1->Series["Series2"]->Points->AddXY(x0, v0);
 			}
 		}
 		/*for (int i = 0; i < Numstep; i++)
