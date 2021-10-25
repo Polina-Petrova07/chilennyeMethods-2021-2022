@@ -77,6 +77,7 @@ namespace CHMlab1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
 
 	private:
 		/// <summary>
@@ -127,19 +128,21 @@ namespace CHMlab1 {
 			this->Column11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->groupBox2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -441,6 +444,7 @@ namespace CHMlab1 {
 			this->groupBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox2->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->groupBox2->Controls->Add(this->pictureBox3);
 			this->groupBox2->Controls->Add(this->pictureBox2);
 			this->groupBox2->Controls->Add(this->pictureBox1);
 			this->groupBox2->Controls->Add(this->label8);
@@ -454,6 +458,16 @@ namespace CHMlab1 {
 			this->groupBox2->TabIndex = 13;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Справка";
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(176, 77);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(366, 108);
+			this->pictureBox2->TabIndex = 14;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Visible = false;
 			// 
 			// pictureBox1
 			// 
@@ -508,15 +522,15 @@ namespace CHMlab1 {
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"Число удвоений шага";
 			// 
-			// pictureBox2
+			// pictureBox3
 			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(176, 77);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(366, 108);
-			this->pictureBox2->TabIndex = 14;
-			this->pictureBox2->TabStop = false;
-			this->pictureBox2->Visible = false;
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(509, 13);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(32, 28);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox3->TabIndex = 15;
+			this->pictureBox3->TabStop = false;
 			// 
 			// MyForm
 			// 
@@ -536,8 +550,9 @@ namespace CHMlab1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -836,6 +851,7 @@ namespace CHMlab1 {
 				}
 			}
 			else MessageBox::Show("выберите тип задачи и нужен ли контроль локальной погрешности");
+			break;
 		}
 		case 1:     //main 1
 		{
@@ -843,7 +859,7 @@ namespace CHMlab1 {
 			switch (comboBox1->SelectedIndex)
 			{
 			case 0:   //без ЛП
-			{/*
+			{
 				chart1->Series["Series1"]->Points->Clear();
 				bool f = true;
 				int i = 1;
@@ -885,12 +901,12 @@ namespace CHMlab1 {
 						f = false;
 						chart1->Series["Series1"]->Points->AddXY(x0, v0);
 					}
-				}*/
+				}
 
 				break;
 			}
 			case 1:   //с ЛП
-			{/*
+			{
 				double eps = System::Convert::ToDouble(textBox4->Text);
 				//double epsMin = eps / 16.0;
 				chart1->Series["Series1"]->Points->Clear();
@@ -997,7 +1013,7 @@ namespace CHMlab1 {
 					}
 					textBox6->Text = System::Convert::ToString(c2O);
 					textBox7->Text = System::Convert::ToString(c1O);
-				}*/
+				}
 				break;
 			}
 			}
