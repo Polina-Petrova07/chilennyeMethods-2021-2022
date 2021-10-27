@@ -719,13 +719,13 @@ namespace CHMlab1 {
 						vG = vG + step * (1.0 / 4.0 * k1_1 + 3.0 / 4.0 * k3_3);
 
 						// check error
-						s = (v2 - v0Ch);
+						s = (v2 - v0Ch)/15.0;
 						double fs = fabs(s);
 						if (eps / (16.0) <= fs && eps >= fs)
 						{
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 							//x0 += step;
-							v0 = vG;
+							//v0 = vG;
 						}
 						else
 						if (fs < (eps / (16.0)))
@@ -734,7 +734,7 @@ namespace CHMlab1 {
 							step = 2 * step;
 							//x0 += step;
 							c2++;
-							v0 = vG;
+							//v0 = vG;
 							c2O++;
 						}
 						else
@@ -768,7 +768,7 @@ namespace CHMlab1 {
 						if (x0 >= rightBord+eps || i == Numstep)
 						{
 							f = false;
-							chart1->Series["Series1"]->Points->AddXY(x0, vG);
+							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 						}
 					}
 					/*int c1 = 0;
