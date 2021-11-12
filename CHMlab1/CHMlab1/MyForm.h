@@ -78,6 +78,14 @@ namespace CHMlab1 {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::PictureBox^ pictureBox4;
+	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::ComboBox^ comboBox3;
 
 	private:
 		/// <summary>
@@ -99,6 +107,13 @@ namespace CHMlab1 {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -128,6 +143,8 @@ namespace CHMlab1 {
 			this->Column11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -135,21 +152,21 @@ namespace CHMlab1 {
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->groupBox2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
 			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button1->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button1->Location = System::Drawing::Point(13, 144);
+			this->button1->Location = System::Drawing::Point(13, 175);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(148, 35);
 			this->button1->TabIndex = 1;
@@ -160,6 +177,13 @@ namespace CHMlab1 {
 			// groupBox1
 			// 
 			this->groupBox1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->groupBox1->Controls->Add(this->comboBox3);
+			this->groupBox1->Controls->Add(this->textBox10);
+			this->groupBox1->Controls->Add(this->label11);
+			this->groupBox1->Controls->Add(this->textBox9);
+			this->groupBox1->Controls->Add(this->label10);
+			this->groupBox1->Controls->Add(this->textBox8);
+			this->groupBox1->Controls->Add(this->label9);
 			this->groupBox1->Controls->Add(this->button3);
 			this->groupBox1->Controls->Add(this->comboBox2);
 			this->groupBox1->Controls->Add(this->button2);
@@ -177,15 +201,76 @@ namespace CHMlab1 {
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Location = System::Drawing::Point(5, -2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(482, 185);
+			this->groupBox1->Size = System::Drawing::Size(482, 216);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"v01 (x)", L"v02 (x)", L"v01 (v02)" });
+			this->comboBox3->Location = System::Drawing::Point(16, 130);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(191, 21);
+			this->comboBox3->TabIndex = 18;
+			this->comboBox3->Text = L"Отображаемый график (для 2 основной)";
+			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(368, 118);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(91, 20);
+			this->textBox10->TabIndex = 17;
+			this->textBox10->Text = L"1";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(215, 121);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(25, 13);
+			this->label11->TabIndex = 16;
+			this->label11->Text = L"v02";
+			// 
+			// textBox9
+			// 
+			this->textBox9->Location = System::Drawing::Point(106, 104);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(91, 20);
+			this->textBox9->TabIndex = 15;
+			this->textBox9->Text = L"1";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(13, 107);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(67, 13);
+			this->label10->TabIndex = 14;
+			this->label10->Text = L"Параметр b";
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(106, 74);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(91, 20);
+			this->textBox8->TabIndex = 13;
+			this->textBox8->Text = L"2";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(13, 81);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(67, 13);
+			this->label9->TabIndex = 12;
+			this->label9->Text = L"Параметр a";
 			// 
 			// button3
 			// 
 			this->button3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button3->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button3->Location = System::Drawing::Point(322, 144);
+			this->button3->Location = System::Drawing::Point(321, 175);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(148, 35);
 			this->button3->TabIndex = 5;
@@ -207,7 +292,7 @@ namespace CHMlab1 {
 			// 
 			this->button2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button2->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button2->Location = System::Drawing::Point(167, 144);
+			this->button2->Location = System::Drawing::Point(167, 175);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(148, 35);
 			this->button2->TabIndex = 4;
@@ -217,7 +302,7 @@ namespace CHMlab1 {
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(368, 118);
+			this->textBox5->Location = System::Drawing::Point(368, 144);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(91, 20);
 			this->textBox5->TabIndex = 10;
@@ -226,7 +311,7 @@ namespace CHMlab1 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(215, 118);
+			this->label5->Location = System::Drawing::Point(214, 146);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(87, 13);
 			this->label5->TabIndex = 9;
@@ -290,9 +375,9 @@ namespace CHMlab1 {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(215, 95);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(19, 13);
+			this->label2->Size = System::Drawing::Size(25, 13);
 			this->label2->TabIndex = 2;
-			this->label2->Text = L"v0";
+			this->label2->Text = L"v01";
 			// 
 			// textBox1
 			// 
@@ -334,10 +419,10 @@ namespace CHMlab1 {
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9, this->Column10,
 					this->Column11
 			});
-			this->dataGridView1->Location = System::Drawing::Point(5, 189);
+			this->dataGridView1->Location = System::Drawing::Point(5, 220);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
-			this->dataGridView1->Size = System::Drawing::Size(405, 363);
+			this->dataGridView1->Size = System::Drawing::Size(405, 332);
 			this->dataGridView1->TabIndex = 3;
 			// 
 			// Column1
@@ -414,9 +499,10 @@ namespace CHMlab1 {
 			chartArea1->Name = L"ChartArea1";
 			this->chart1->ChartAreas->Add(chartArea1);
 			legend1->Docking = System::Windows::Forms::DataVisualization::Charting::Docking::Bottom;
+			legend1->IsTextAutoFit = false;
 			legend1->Name = L"Legend1";
 			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(416, 189);
+			this->chart1->Location = System::Drawing::Point(416, 220);
 			this->chart1->Name = L"chart1";
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
@@ -435,7 +521,7 @@ namespace CHMlab1 {
 			series2->Name = L"Series2";
 			this->chart1->Series->Add(series1);
 			this->chart1->Series->Add(series2);
-			this->chart1->Size = System::Drawing::Size(626, 363);
+			this->chart1->Size = System::Drawing::Size(626, 332);
 			this->chart1->TabIndex = 4;
 			this->chart1->Text = L"chart1";
 			// 
@@ -444,6 +530,7 @@ namespace CHMlab1 {
 			this->groupBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox2->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->groupBox2->Controls->Add(this->pictureBox4);
 			this->groupBox2->Controls->Add(this->pictureBox3);
 			this->groupBox2->Controls->Add(this->pictureBox2);
 			this->groupBox2->Controls->Add(this->pictureBox1);
@@ -454,15 +541,35 @@ namespace CHMlab1 {
 			this->groupBox2->Controls->Add(this->label6);
 			this->groupBox2->Location = System::Drawing::Point(490, -2);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(552, 185);
+			this->groupBox2->Size = System::Drawing::Size(552, 216);
 			this->groupBox2->TabIndex = 13;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Справка";
 			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(188, 77);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(364, 106);
+			this->pictureBox4->TabIndex = 16;
+			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Visible = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(509, 13);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(32, 28);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox3->TabIndex = 15;
+			this->pictureBox3->TabStop = false;
+			// 
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(176, 77);
+			this->pictureBox2->Location = System::Drawing::Point(188, 77);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(366, 108);
 			this->pictureBox2->TabIndex = 14;
@@ -522,16 +629,6 @@ namespace CHMlab1 {
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"Число удвоений шага";
 			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(509, 13);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(32, 28);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox3->TabIndex = 15;
-			this->pictureBox3->TabStop = false;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -550,9 +647,10 @@ namespace CHMlab1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -566,16 +664,28 @@ namespace CHMlab1 {
 			double f = x0 / (1 + x0 * x0);
 			return (f * v0 * v0 + v0 - pow(v0, 3) * sin(10 * x0));
 		}
+		double FuncMain_2_1(double x0, double v01, double v02)
+		{
+			return (v02);
+		}
+		double FuncMain_2_2(double x0, double v01, double v02, double a, double b)
+		{
+			return (-a * a * sin(v01) - b * sin(x0));
+		}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		chart1->Series["Series1"]->Points->Clear();
-		double x0Pr, v0Pr;
+		double x0Pr, v0Pr, v0Pr2;
 		double step = System::Convert::ToDouble(textBox1->Text);
-		double v0 = System::Convert::ToDouble(textBox2->Text);
+		double v01 = System::Convert::ToDouble(textBox2->Text);
+		double v02 = System::Convert::ToDouble(textBox10->Text);
 		int Numstep = System::Convert::ToDouble(textBox3->Text);
 		double rightBord = System::Convert::ToDouble(textBox5->Text);
+		double a = System::Convert::ToDouble(textBox8->Text);
+		double b = System::Convert::ToDouble(textBox9->Text);
 		double x0 = 0.0;
 		x0Pr = x0;
-		v0Pr = v0;
+		v0Pr = v01;
+		v0Pr2 = v02;
 		switch (comboBox2->SelectedIndex)//what task
 		{
 		case 0:   //test task
@@ -592,41 +702,41 @@ namespace CHMlab1 {
 					int i = 1;
 					dataGridView1->Rows->Add(1);
 					dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
-					dataGridView1->Rows[0]->Cells[2]->Value = v0.ToString();
+					dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
 					dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
 					while (f == true)
 					{
 						double k1 = 0.0, k2 = 0.0, k3 = 0.0, k4 = 0.0;
-						k1 = FuncDU(x0, v0);
-						k2 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k1);
-						k3 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k2);
-						k4 = FuncDU(x0 + step, v0 + step * k3);
-						chart1->Series["Series1"]->Points->AddXY(x0, v0);
+						k1 = FuncDU(x0, v01);
+						k2 = FuncDU(x0 + step / 2.0, v01 + step / 2.0 * k1);
+						k3 = FuncDU(x0 + step / 2.0, v01 + step / 2.0 * k2);
+						k4 = FuncDU(x0 + step, v01 + step * k3);
+						chart1->Series["Series1"]->Points->AddXY(x0, v01);
 						x0 += step;
-						v0 += step / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4);
+						v01 += step / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4);
 						//table
 						dataGridView1->Rows->Add(1);
 						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
 						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
-						dataGridView1->Rows[i]->Cells[2]->Value = v0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
 						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
 
 						//half step
 						double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0, k4_4 = 0.0;
-						k1_1 = FuncDU(x0, v0);
-						k2_2 = FuncDU(x0 + step / 4.0, v0 + step / 4.0 * k1_1);
-						k3_3 = FuncDU(x0 + step / 4.0, v0 + step / 4.0 * k2_2);
-						k4_4 = FuncDU(x0 + step / 2.0, v0 + step / 2.0 * k3_3);
-						double v1 = v0;
+						k1_1 = FuncDU(x0, v01);
+						k2_2 = FuncDU(x0 + step / 4.0, v01 + step / 4.0 * k1_1);
+						k3_3 = FuncDU(x0 + step / 4.0, v01 + step / 4.0 * k2_2);
+						k4_4 = FuncDU(x0 + step / 2.0, v01 + step / 2.0 * k3_3);
+						double v1 = v01;
 						v1 = v1 + step / 12.0 * (k1_1 + 2*k2_2 + 2*k3_3 + k4_4);
 						dataGridView1->Rows[i]->Cells[3]->Value = v1.ToString();
-						dataGridView1->Rows[i]->Cells[4]->Value = (v0 - v1).ToString();
+						dataGridView1->Rows[i]->Cells[4]->Value = (v01 - v1).ToString();
 
 						i++;
 						if (x0 >= rightBord - step || i == Numstep)
 						{
 							f = false;
-							chart1->Series["Series1"]->Points->AddXY(x0, v0);
+							chart1->Series["Series1"]->Points->AddXY(x0, v01);
 						}
 					}
 					/*dataGridView1->Rows->Add(1);
@@ -675,16 +785,16 @@ namespace CHMlab1 {
 					int c2O = 0;
 					int i = 1;
 					bool f = true;
-					double vG = v0;
+					double vG = v01;
 					double xH = x0;
-					double vH = v0;
+					double vH = v01;
 					double s,v2;
-					double v0Ch = v0;
+					double v0Ch = v01;
 					dataGridView1->Rows->Add(1);
 					dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
-					dataGridView1->Rows[0]->Cells[2]->Value = v0.ToString();
+					dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
 					dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
-					chart1->Series["Series1"]->Points->AddXY(x0, v0);
+					chart1->Series["Series1"]->Points->AddXY(x0, v01);
 				
 					while (f == true)
 					{
@@ -703,7 +813,7 @@ namespace CHMlab1 {
 						k4 = FuncDU(x0 + step / 2.0, v0Ch + step / 2.0 * k3);
 
 						xH = x0 + step / 2.0;
-						vH = v0 + step / 12.0 * (k1 + 2 * k2 + 2 * k3 + k4);
+						vH = v01 + step / 12.0 * (k1 + 2 * k2 + 2 * k3 + k4);
 
 						k1 = FuncDU(xH, vH);
 						k2 = FuncDU(xH + step / 4.0, vH + step / 4.0 * k1);
@@ -721,14 +831,14 @@ namespace CHMlab1 {
 						// check error
 						s = (v2 - v0Ch)/15.0;
 						double fs = fabs(s);
-						if (eps / (16.0) <= fs && eps >= fs)
+						if (eps / (32.0) <= fs && eps >= fs)
 						{
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 							//x0 += step;
 							//v0 = vG;
 						}
 						else
-						if (fs < (eps / (16.0)))
+						if (fs < (eps / (32.0)))
 						{
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 							step = 2 * step;
@@ -743,7 +853,7 @@ namespace CHMlab1 {
 							step = step / 2.0;
 							c1++;
 							x0 = x0Pr;
-							v0 = v0Ch;
+							v01 = v0Ch;
 							c1O++;
 						}
 						double olp;
@@ -752,15 +862,15 @@ namespace CHMlab1 {
 						dataGridView1->Rows->Add(1);
 						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
 						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
-						dataGridView1->Rows[i]->Cells[2]->Value = v0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
 						dataGridView1->Rows[i]->Cells[3]->Value = v2.ToString();
-						dataGridView1->Rows[i]->Cells[4]->Value = (v0-v2).ToString();
+						dataGridView1->Rows[i]->Cells[4]->Value = (v01-v2).ToString();
 						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
 						dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
 						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
-						dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v0)).ToString();
+						dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 						c1 = 0;
 						c2 = 0;
 						i++;
@@ -865,41 +975,41 @@ namespace CHMlab1 {
 				int i = 1;
 				dataGridView1->Rows->Add(1);
 				dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
-				dataGridView1->Rows[0]->Cells[2]->Value = v0.ToString();
+				dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
 				dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
 				while (f == true)
 				{
 					double k1 = 0.0, k2 = 0.0, k3 = 0.0, k4 = 0.0;
-					k1 = FuncMain_1(x0, v0);
-					k2 = FuncMain_1(x0 + step / 2.0, v0 + step / 2.0 * k1);
-					k3 = FuncMain_1(x0 + step / 2.0, v0 + step / 2.0 * k2);
-					k4 = FuncMain_1(x0 + step, v0 + step * k3);
-					chart1->Series["Series1"]->Points->AddXY(x0, v0);
+					k1 = FuncMain_1(x0, v01);
+					k2 = FuncMain_1(x0 + step / 2.0, v01 + step / 2.0 * k1);
+					k3 = FuncMain_1(x0 + step / 2.0, v01 + step / 2.0 * k2);
+					k4 = FuncMain_1(x0 + step, v01 + step * k3);
+					chart1->Series["Series1"]->Points->AddXY(x0, v01);
 					x0 += step;
-					v0 += step / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4);
+					v01 += step / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4);
 					//table
 					dataGridView1->Rows->Add(1);
 					dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
 					dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
-					dataGridView1->Rows[i]->Cells[2]->Value = v0.ToString();
+					dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
 					dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
 
 					//half step
 					double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0, k4_4 = 0.0;
-					k1_1 = FuncMain_1(x0, v0);
-					k2_2 = FuncMain_1(x0 + step / 4.0, v0 + step / 4.0 * k1_1);
-					k3_3 = FuncMain_1(x0 + step / 4.0, v0 + step / 4.0 * k2_2);
-					k4_4 = FuncMain_1(x0 + step / 2.0, v0 + step / 2.0 * k3_3);
-					double v1 = v0;
+					k1_1 = FuncMain_1(x0, v01);
+					k2_2 = FuncMain_1(x0 + step / 4.0, v01 + step / 4.0 * k1_1);
+					k3_3 = FuncMain_1(x0 + step / 4.0, v01 + step / 4.0 * k2_2);
+					k4_4 = FuncMain_1(x0 + step / 2.0, v01 + step / 2.0 * k3_3);
+					double v1 = v01;
 					v1 = v1 + step / 12.0 * (k1_1 + 2 * k2_2 + 2 * k3_3 + k4_4);
 					dataGridView1->Rows[i]->Cells[3]->Value = v1.ToString();
-					dataGridView1->Rows[i]->Cells[4]->Value = (v0 - v1).ToString();
+					dataGridView1->Rows[i]->Cells[4]->Value = (v01 - v1).ToString();
 
 					i++;
 					if (x0 >= rightBord - step || i == Numstep)
 					{
 						f = false;
-						chart1->Series["Series1"]->Points->AddXY(x0, v0);
+						chart1->Series["Series1"]->Points->AddXY(x0, v01);
 					}
 				}
 
@@ -916,16 +1026,16 @@ namespace CHMlab1 {
 				int c2O = 0;
 				int i = 1;
 				bool f = true;
-				double vG = v0;
+				double vG = v01;
 				double xH = x0;
-				double vH = v0;
+				double vH = v01;
 				double s, v2;
-				double v0Ch = v0;
+				double v0Ch = v01;
 				dataGridView1->Rows->Add(1);
 				dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
-				dataGridView1->Rows[0]->Cells[2]->Value = v0.ToString();
+				dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
 				dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
-				chart1->Series["Series1"]->Points->AddXY(x0, v0);
+				chart1->Series["Series1"]->Points->AddXY(x0, v01);
 
 				while (f == true)
 				{
@@ -944,7 +1054,7 @@ namespace CHMlab1 {
 					k4 = FuncMain_1(x0 + step / 2.0, v0Ch + step / 2.0 * k3);
 
 					xH = x0 + step / 2.0;
-					vH = v0 + step / 12.0 * (k1 + 2 * k2 + 2 * k3 + k4);
+					vH = v01 + step / 12.0 * (k1 + 2 * k2 + 2 * k3 + k4);
 
 					k1 = FuncMain_1(xH, vH);
 					k2 = FuncMain_1(xH + step / 4.0, vH + step / 4.0 * k1);
@@ -962,20 +1072,20 @@ namespace CHMlab1 {
 					// check error
 					s = (v2 - v0Ch);
 					double fs = fabs(s);
-					if (eps / (16.0) <= fs && eps >= fs)
+					if (eps / (32.0) <= fs && eps >= fs)
 					{
 						chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 						//x0 += step;
-						v0 = vG;
+						v01 = vG;
 					}
 					else
-						if (fs < (eps / (16.0)))
+						if (fs < (eps / (32.0)))
 						{
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 							step = 2 * step;
 							//x0 += step;
 							c2++;
-							v0 = vG;
+							v01 = vG;
 							c2O++;
 						}
 						else
@@ -984,7 +1094,7 @@ namespace CHMlab1 {
 							step = step / 2.0;
 							c1++;
 							x0 = x0Pr;
-							v0 = v0Ch;
+							v01 = v0Ch;
 							c1O++;
 						}
 					double olp;
@@ -993,15 +1103,15 @@ namespace CHMlab1 {
 					dataGridView1->Rows->Add(1);
 					dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
 					dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
-					dataGridView1->Rows[i]->Cells[2]->Value = v0.ToString();
+					dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
 					dataGridView1->Rows[i]->Cells[3]->Value = v2.ToString();
-					dataGridView1->Rows[i]->Cells[4]->Value = (v0 - v2).ToString();
+					dataGridView1->Rows[i]->Cells[4]->Value = (v01 - v2).ToString();
 					dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
-					dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
+					//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 					dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 					dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
 					dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
-					dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v0)).ToString();
+					//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 					c1 = 0;
 					c2 = 0;
 					i++;
@@ -1009,7 +1119,7 @@ namespace CHMlab1 {
 					if (x0 >= rightBord + eps || i == Numstep)
 					{
 						f = false;
-						chart1->Series["Series1"]->Points->AddXY(x0, vG);
+						chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 					}
 					textBox6->Text = System::Convert::ToString(c2O);
 					textBox7->Text = System::Convert::ToString(c1O);
@@ -1017,10 +1127,508 @@ namespace CHMlab1 {
 				break;
 			}
 			}
+			break;
 		}
 		case 2:    //main2
 		{
+			pictureBox4->Visible = true;
+			this->label9->Visible = true;
+			this->label10->Visible = true;
+			this->textBox8->Visible = true;
+			this->textBox9->Visible = true;
+			switch (comboBox1->SelectedIndex)
+			{
+			case 0:   //без ЛП
+			{
+				chart1->Series["Series1"]->Points->Clear();
+				bool f = true;
+				int i = 1;
+				dataGridView1->Rows->Add(1);
+				dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
+				dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
+				dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
+				switch (comboBox3->SelectedIndex)
+				{
+				case 0:   //v01 (x)
+				{
+					while (f == true)
+					{
+						double k11 = 0.0, k21 = 0.0, k31 = 0.0, k41 = 0.0;
+						double k12 = 0.0, k22 = 0.0, k32 = 0.0, k42 = 0.0;
 
+						k11 = FuncMain_2_1(x0, v01, v02);
+						k12 = FuncMain_2_2(x0, v01, v02, a, b);
+
+						k21 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step, v01 + step * k31, v02 + step * k32);
+						k42 = FuncMain_2_2(x0 + step, v01 + step * k31, v02 + step * k32, a, b);
+
+						chart1->Series["Series1"]->Points->AddXY(x0, v01);
+						x0 += step;
+						v01 += step / 6.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						i++;
+						if (x0 >= rightBord - step || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(x0, v01);
+						}
+					}
+					break;
+				}
+				case 1:   //v02 (x)
+				{
+					while (f == true)
+					{
+						double k11 = 0.0, k21 = 0.0, k31 = 0.0, k41 = 0.0;
+						double k12 = 0.0, k22 = 0.0, k32 = 0.0, k42 = 0.0;
+
+						k11 = FuncMain_2_1(x0, v01, v02);
+						k12 = FuncMain_2_2(x0, v01, v02, a, b);
+
+						k21 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step, v01 + step * k31, v02 + step * k32);
+						k42 = FuncMain_2_2(x0 + step, v01 + step * k31, v02 + step * k32, a, b);
+
+						chart1->Series["Series1"]->Points->AddXY(x0, v02);
+						x0 += step;
+						v02 += step / 6.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						i++;
+						if (x0 >= rightBord - step || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(x0, v02);
+						}
+					}
+					break;
+				}
+				case 2:   //v01 (v02)
+				{
+					while (f == true)
+					{
+						double k11 = 0.0, k21 = 0.0, k31 = 0.0, k41 = 0.0;
+						double k12 = 0.0, k22 = 0.0, k32 = 0.0, k42 = 0.0;
+
+						k11 = FuncMain_2_1(x0, v01, v02);
+						k12 = FuncMain_2_2(x0, v01, v02, a, b);
+
+						k21 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step, v01 + step * k31, v02 + step * k32);
+						k42 = FuncMain_2_2(x0 + step, v01 + step * k31, v02 + step * k32, a, b);
+
+						chart1->Series["Series1"]->Points->AddXY(v02, v01);
+						x0 += step;
+						v01 += step / 6.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v02 += step / 6.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						i++;
+						if (x0 >= rightBord - step || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(v02, v01);
+						}
+					}
+					break;
+				}
+				}
+				break;
+			}
+			case 1:   //с ЛП
+			{
+				double eps = System::Convert::ToDouble(textBox4->Text);
+				//double epsMin = eps / 16.0;
+				chart1->Series["Series1"]->Points->Clear();
+				int c1 = 0;
+				int c2 = 0;
+				int c1O = 0;
+				int c2O = 0;
+				int i = 1;
+				bool f = true;
+				double vG = v01;
+				double xH = x0;
+				double vH = v01;
+				double vH2 = v02;
+				double s,s1,s2, v2, v22;
+				double v0Ch = v01;
+				double v0Ch2 = v02;
+				dataGridView1->Rows->Add(1);
+				dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
+				dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
+				dataGridView1->Rows[0]->Cells[6]->Value = step.ToString();
+				switch (comboBox3->SelectedIndex)
+				{
+				case 0:   // v01(x0)
+				{
+					while (f==true)
+					{
+						x0 += step;
+						x0Pr = x0;
+						double k11 = 0.0, k21 = 0.0, k31 = 0.0, k41 = 0.0;
+						double k12 = 0.0, k22 = 0.0, k32 = 0.0, k42 = 0.0;
+
+						k11 = FuncMain_2_1(x0, v01, v02);
+						k12 = FuncMain_2_2(x0, v01, v02, a, b);
+
+						k21 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step, v01 + step * k31, v02 + step * k32);
+						k42 = FuncMain_2_2(x0 + step, v01 + step * k31, v02 + step * k32, a, b);
+
+						v0Ch += step / 6.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v0Ch2 += step / 6.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//second
+						k21 = FuncMain_2_1(x0 + step / 4.0, v01 + step / 4.0 * k11, v02 + step / 4.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 4.0, v01 + step / 4.0 * k11, v02 + step / 4.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 4.0, v01 + step / 4.0 * k21, v02 + step / 4.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 4.0, v01 + step / 4.0 * k21, v02 + step / 4.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k31, v02 + step / 2.0 * k32);
+						k42 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k31, v02 + step / 2.0 * k32, a, b);
+
+						xH = x0 + step / 2.0;
+						vH = v01 + step / 12.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						vH2 = v02 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						k11 = FuncMain_2_1(xH, vH, vH2);
+						k12 = FuncMain_2_2(xH, vH, vH2, a, b);
+
+						k21 = FuncMain_2_1(xH + step / 4.0, vH + step / 4.0 * k11, vH2 + step / 4.0 * k12);
+						k22 = FuncMain_2_2(xH + step / 4.0, vH + step / 4.0 * k11, vH2 + step / 4.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(xH + step / 4.0, vH + step / 4.0 * k21, vH2 + step / 4.0 * k22);
+						k32 = FuncMain_2_2(xH + step / 4.0, vH + step / 4.0 * k21, vH2 + step / 4.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(xH + step / 2.0, vH + step / 2.0 * k31, vH2 + step / 2.0 * k32);
+						k42 = FuncMain_2_2(xH + step / 2.0, vH + step / 2.0 * k31, vH2 + step / 2.0 * k32, a, b);
+
+						v2 = vH + step / 12.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v22 = vH2 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//chek error
+						s1 = (v2 - v0Ch) / 15.0;
+						s2 = (v22 - v0Ch2) / 15.0;
+						s = sqrt(s1 * s1 + s2 * s2);
+						double fs = fabs(s);
+						if (eps / (32.0) <= fs && eps >= fs)
+						{
+							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
+						}
+						else
+						{
+							if (fs < (eps / (32.0)))
+							{
+								chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
+								step = step * 2.0;
+								c2++;
+								c2O++;
+							}
+							else
+							{
+								step = step / 2.0;
+								c1++;
+								c1O++;
+								x0 = x0Pr;
+								v01 = v0Ch;
+								v02 = v0Ch2;
+							}
+						}
+						double olp;
+						olp = s * 16.0;
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
+						dataGridView1->Rows[i]->Cells[3]->Value = v2.ToString();
+						dataGridView1->Rows[i]->Cells[4]->Value = (v01 - v2).ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
+						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
+						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
+						c1 = 0;
+						c2 = 0;
+						i++;
+
+						if (x0 >= rightBord + eps || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
+						}
+						textBox6->Text = System::Convert::ToString(c2O);
+						textBox7->Text = System::Convert::ToString(c1O);
+						
+					}
+					break;
+				}
+				case 1:   //v02(x0)
+				{
+					while (f == true)
+					{
+						x0 += step;
+						x0Pr = x0;
+						double k11 = 0.0, k21 = 0.0, k31 = 0.0, k41 = 0.0;
+						double k12 = 0.0, k22 = 0.0, k32 = 0.0, k42 = 0.0;
+
+						k11 = FuncMain_2_1(x0, v01, v02);
+						k12 = FuncMain_2_2(x0, v01, v02, a, b);
+
+						k21 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step, v01 + step * k31, v02 + step * k32);
+						k42 = FuncMain_2_2(x0 + step, v01 + step * k31, v02 + step * k32, a, b);
+
+						v0Ch += step / 6.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v0Ch2 += step / 6.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//second
+						k21 = FuncMain_2_1(x0 + step / 4.0, v01 + step / 4.0 * k11, v02 + step / 4.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 4.0, v01 + step / 4.0 * k11, v02 + step / 4.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 4.0, v01 + step / 4.0 * k21, v02 + step / 4.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 4.0, v01 + step / 4.0 * k21, v02 + step / 4.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k31, v02 + step / 2.0 * k32);
+						k42 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k31, v02 + step / 2.0 * k32, a, b);
+
+						xH = x0 + step / 2.0;
+						vH = v01 + step / 12.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						vH2 = v02 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						k11 = FuncMain_2_1(xH, vH, vH2);
+						k12 = FuncMain_2_2(xH, vH, vH2, a, b);
+
+						k21 = FuncMain_2_1(xH + step / 4.0, vH + step / 4.0 * k11, vH2 + step / 4.0 * k12);
+						k22 = FuncMain_2_2(xH + step / 4.0, vH + step / 4.0 * k11, vH2 + step / 4.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(xH + step / 4.0, vH + step / 4.0 * k21, vH2 + step / 4.0 * k22);
+						k32 = FuncMain_2_2(xH + step / 4.0, vH + step / 4.0 * k21, vH2 + step / 4.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(xH + step / 2.0, vH + step / 2.0 * k31, vH2 + step / 2.0 * k32);
+						k42 = FuncMain_2_2(xH + step / 2.0, vH + step / 2.0 * k31, vH2 + step / 2.0 * k32, a, b);
+
+						v2 = vH + step / 12.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v22 = vH2 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//chek error
+						s1 = (v2 - v0Ch) / 15.0;
+						s2 = (v22 - v0Ch2) / 15.0;
+						s = sqrt(s1 * s1 + s2 * s2);
+						double fs = fabs(s);
+						if (eps / (32.0) <= fs && eps >= fs)
+						{
+							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch2);
+						}
+						else
+						{
+							if (fs < (eps / (32.0)))
+							{
+								chart1->Series["Series1"]->Points->AddXY(x0, v0Ch2);
+								step = step * 2.0;
+								c2++;
+								c2O++;
+							}
+							else
+							{
+								step = step / 2.0;
+								c1++;
+								c1O++;
+								x0 = x0Pr;
+								v01 = v0Ch;
+								v02 = v0Ch2;
+							}
+						}
+						double olp;
+						olp = s * 16.0;
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
+						dataGridView1->Rows[i]->Cells[3]->Value = v2.ToString();
+						dataGridView1->Rows[i]->Cells[4]->Value = (v01 - v2).ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
+						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
+						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
+						c1 = 0;
+						c2 = 0;
+						i++;
+
+						if (x0 >= rightBord + eps || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch2);
+						}
+						textBox6->Text = System::Convert::ToString(c2O);
+						textBox7->Text = System::Convert::ToString(c1O);
+
+					}
+					break;
+				}
+				case 2:   //v01 (v02)
+				{
+					while (f == true)
+					{
+						x0 += step;
+						x0Pr = x0;
+						double k11 = 0.0, k21 = 0.0, k31 = 0.0, k41 = 0.0;
+						double k12 = 0.0, k22 = 0.0, k32 = 0.0, k42 = 0.0;
+
+						k11 = FuncMain_2_1(x0, v01, v02);
+						k12 = FuncMain_2_2(x0, v01, v02, a, b);
+
+						k21 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k11, v02 + step / 2.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k21, v02 + step / 2.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step, v01 + step * k31, v02 + step * k32);
+						k42 = FuncMain_2_2(x0 + step, v01 + step * k31, v02 + step * k32, a, b);
+
+						v0Ch += step / 6.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v0Ch2 += step / 6.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//second
+						k21 = FuncMain_2_1(x0 + step / 4.0, v01 + step / 4.0 * k11, v02 + step / 4.0 * k12);
+						k22 = FuncMain_2_2(x0 + step / 4.0, v01 + step / 4.0 * k11, v02 + step / 4.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(x0 + step / 4.0, v01 + step / 4.0 * k21, v02 + step / 4.0 * k22);
+						k32 = FuncMain_2_2(x0 + step / 4.0, v01 + step / 4.0 * k21, v02 + step / 4.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(x0 + step / 2.0, v01 + step / 2.0 * k31, v02 + step / 2.0 * k32);
+						k42 = FuncMain_2_2(x0 + step / 2.0, v01 + step / 2.0 * k31, v02 + step / 2.0 * k32, a, b);
+
+						xH = x0 + step / 2.0;
+						vH = v01 + step / 12.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						vH2 = v02 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						k11 = FuncMain_2_1(xH, vH, vH2);
+						k12 = FuncMain_2_2(xH, vH, vH2, a, b);
+
+						k21 = FuncMain_2_1(xH + step / 4.0, vH + step / 4.0 * k11, vH2 + step / 4.0 * k12);
+						k22 = FuncMain_2_2(xH + step / 4.0, vH + step / 4.0 * k11, vH2 + step / 4.0 * k12, a, b);
+
+						k31 = FuncMain_2_1(xH + step / 4.0, vH + step / 4.0 * k21, vH2 + step / 4.0 * k22);
+						k32 = FuncMain_2_2(xH + step / 4.0, vH + step / 4.0 * k21, vH2 + step / 4.0 * k22, a, b);
+
+						k41 = FuncMain_2_1(xH + step / 2.0, vH + step / 2.0 * k31, vH2 + step / 2.0 * k32);
+						k42 = FuncMain_2_2(xH + step / 2.0, vH + step / 2.0 * k31, vH2 + step / 2.0 * k32, a, b);
+
+						v2 = vH + step / 12.0 * (k11 + 2 * k21 + 2 * k31 + k41);
+						v22 = vH2 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
+
+						//chek error
+						s1 = (v2 - v0Ch) / 15.0;
+						s2 = (v22 - v0Ch2) / 15.0;
+						s = sqrt(s1 * s1 + s2 * s2);
+						double fs = fabs(s);
+						if (eps / (32.0) <= fs && eps >= fs)
+						{
+							chart1->Series["Series1"]->Points->AddXY(v0Ch2, v0Ch);
+						}
+						else
+						{
+							if (fs < (eps / (32.0)))
+							{
+								chart1->Series["Series1"]->Points->AddXY(v0Ch2, v0Ch);
+								step = step * 2.0;
+								c2++;
+								c2O++;
+							}
+							else
+							{
+								step = step / 2.0;
+								c1++;
+								c1O++;
+								x0 = x0Pr;
+								v01 = v0Ch;
+								v02 = v0Ch2;
+							}
+						}
+						double olp;
+						olp = s * 16.0;
+						//table
+						dataGridView1->Rows->Add(1);
+						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
+						dataGridView1->Rows[i]->Cells[1]->Value = x0.ToString();
+						dataGridView1->Rows[i]->Cells[2]->Value = v01.ToString();
+						dataGridView1->Rows[i]->Cells[3]->Value = v2.ToString();
+						dataGridView1->Rows[i]->Cells[4]->Value = (v01 - v2).ToString();
+						dataGridView1->Rows[i]->Cells[6]->Value = step.ToString();
+						//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
+						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
+						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
+						c1 = 0;
+						c2 = 0;
+						i++;
+
+						if (x0 >= rightBord + eps || i == Numstep)
+						{
+							f = false;
+							chart1->Series["Series1"]->Points->AddXY(v0Ch2, v0Ch);
+						}
+						textBox6->Text = System::Convert::ToString(c2O);
+						textBox7->Text = System::Convert::ToString(c1O);
+
+					}
+					break;
+				}
+				}
+				break;
+			}
+			}
+			break;
 		}
 		}
 	}
@@ -1062,8 +1670,10 @@ namespace CHMlab1 {
 		textBox7->Text = " ";
 		pictureBox1->Visible = false;
 		pictureBox2->Visible = false;
-		comboBox1->SelectedIndex = -1;
-		comboBox2->SelectedIndex = -1;
+		pictureBox4->Visible = false;
+		//comboBox1->SelectedIndex = -1;
+		//comboBox2->SelectedIndex = -1;
+		
 		//dataGridView1->Columns->Clear();
 	}
 };
