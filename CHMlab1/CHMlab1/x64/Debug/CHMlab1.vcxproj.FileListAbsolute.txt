@@ -1,0 +1,3 @@
+C:\Users\user\tets1\CHMlab1\CHMlab1\x64\Debug\CHMlab1.vcxprojAssemblyReference.cache
+C:\Users\user\tets1\CHMlab1\CHMlab1\x64\Debug\CHMlab1.MyForm.resources
+C:\Users\user\tets1\CHMlab1\CHMlab1\x64\Debug\CHMlab1.vcxproj.GenerateResource.cache

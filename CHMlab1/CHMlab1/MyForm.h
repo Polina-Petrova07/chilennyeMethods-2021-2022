@@ -1,6 +1,6 @@
 #pragma once
 #include <stdlib.h>
-#include <math.h>
+#include "math.h"
 
 namespace CHMlab1 {
 
@@ -230,7 +230,7 @@ namespace CHMlab1 {
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(25, 13);
 			this->label11->TabIndex = 16;
-			this->label11->Text = L"v02";
+			this->label11->Text = L"u02";
 			// 
 			// textBox9
 			// 
@@ -377,7 +377,7 @@ namespace CHMlab1 {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(25, 13);
 			this->label2->TabIndex = 2;
-			this->label2->Text = L"v01";
+			this->label2->Text = L"u01";
 			// 
 			// textBox1
 			// 
@@ -422,7 +422,7 @@ namespace CHMlab1 {
 			this->dataGridView1->Location = System::Drawing::Point(5, 220);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
-			this->dataGridView1->Size = System::Drawing::Size(405, 332);
+			this->dataGridView1->Size = System::Drawing::Size(479, 332);
 			this->dataGridView1->TabIndex = 3;
 			// 
 			// Column1
@@ -502,7 +502,7 @@ namespace CHMlab1 {
 			legend1->IsTextAutoFit = false;
 			legend1->Name = L"Legend1";
 			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(416, 220);
+			this->chart1->Location = System::Drawing::Point(490, 220);
 			this->chart1->Name = L"chart1";
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
@@ -521,7 +521,7 @@ namespace CHMlab1 {
 			series2->Name = L"Series2";
 			this->chart1->Series->Add(series1);
 			this->chart1->Series->Add(series2);
-			this->chart1->Size = System::Drawing::Size(626, 332);
+			this->chart1->Size = System::Drawing::Size(552, 332);
 			this->chart1->TabIndex = 4;
 			this->chart1->Text = L"chart1";
 			// 
@@ -842,9 +842,7 @@ namespace CHMlab1 {
 						{
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
 							step = 2 * step;
-							//x0 += step;
 							c2++;
-							//v0 = vG;
 							c2O++;
 						}
 						else
@@ -869,13 +867,13 @@ namespace CHMlab1 {
 						dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  // !
 						dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 						c1 = 0;
 						c2 = 0;
 						i++;
 
-						if (x0 >= rightBord+eps || i == Numstep)
+						if (x0 >= rightBord-eps || i == Numstep)
 						{
 							f = false;
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
@@ -1110,7 +1108,7 @@ namespace CHMlab1 {
 					//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 					dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 					dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-					dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+					dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  // !
 					//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 					c1 = 0;
 					c2 = 0;
@@ -1385,7 +1383,7 @@ namespace CHMlab1 {
 						dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  // !
 						dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 						c1 = 0;
 						c2 = 0;
@@ -1496,7 +1494,7 @@ namespace CHMlab1 {
 						//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  // !
 						//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 						c1 = 0;
 						c2 = 0;
@@ -1567,8 +1565,8 @@ namespace CHMlab1 {
 						v22 = vH2 + step / 12.0 * (k12 + 2 * k22 + 2 * k32 + k42);
 
 						//chek error
-						s1 = (v2 - v0Ch) / 15.0;
-						s2 = (v22 - v0Ch2) / 15.0;
+						s1 = fabs((v2 - v0Ch) / 15.0);
+						s2 = fabs((v22 - v0Ch2) / 15.0);
 						s = sqrt(s1 * s1 + s2 * s2);
 						double fs = fabs(s);
 						if (eps / (32.0) <= fs && eps >= fs)
@@ -1607,7 +1605,7 @@ namespace CHMlab1 {
 						//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-						dataGridView1->Rows[i]->Cells[5]->Value = olp.ToString();
+						dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  //!
 						//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 						c1 = 0;
 						c2 = 0;
