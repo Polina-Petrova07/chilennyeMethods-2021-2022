@@ -13,3 +13,4 @@
 
 
 ННГУ. ИИТММ. 2021г. 
+// Copyrighting Petrova Polina 2021
