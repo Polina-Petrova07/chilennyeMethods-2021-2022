@@ -1,0 +1,4 @@
+﻿  MyForm.cpp
+C:\Users\user\Desktop\programs\CHM\CHM\MyForm.h(947,11): warning C4101: constA: неиспользованная локальная переменная
+  about1.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  CHM.vcxproj -> C:\Users\user\Desktop\programs\CHM\x64\Debug\CHM.exe
