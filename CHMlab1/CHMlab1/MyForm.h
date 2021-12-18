@@ -86,6 +86,16 @@ namespace CHMlab1 {
 	private: System::Windows::Forms::TextBox^ textBox10;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::ComboBox^ comboBox3;
+	private: System::Windows::Forms::Label^ label29;
+	private: System::Windows::Forms::Label^ label28;
+	private: System::Windows::Forms::Label^ label26;
+	private: System::Windows::Forms::Label^ label24;
+	private: System::Windows::Forms::Label^ label21;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::Windows::Forms::Label^ label27;
+	private: System::Windows::Forms::Label^ label25;
+	private: System::Windows::Forms::Label^ label23;
+	private: System::Windows::Forms::Label^ label22;
 
 	private:
 		/// <summary>
@@ -143,7 +153,17 @@ namespace CHMlab1 {
 			this->Column11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
@@ -400,7 +420,7 @@ namespace CHMlab1 {
 			// 
 			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button4->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button4->Location = System::Drawing::Point(884, 510);
+			this->button4->Location = System::Drawing::Point(1042, 510);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(148, 35);
 			this->button4->TabIndex = 12;
@@ -502,7 +522,7 @@ namespace CHMlab1 {
 			legend1->IsTextAutoFit = false;
 			legend1->Name = L"Legend1";
 			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(490, 220);
+			this->chart1->Location = System::Drawing::Point(492, 220);
 			this->chart1->Name = L"chart1";
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
@@ -521,7 +541,7 @@ namespace CHMlab1 {
 			series2->Name = L"Series2";
 			this->chart1->Series->Add(series1);
 			this->chart1->Series->Add(series2);
-			this->chart1->Size = System::Drawing::Size(552, 332);
+			this->chart1->Size = System::Drawing::Size(710, 332);
 			this->chart1->TabIndex = 4;
 			this->chart1->Text = L"chart1";
 			// 
@@ -530,7 +550,17 @@ namespace CHMlab1 {
 			this->groupBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox2->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->groupBox2->Controls->Add(this->label27);
+			this->groupBox2->Controls->Add(this->label25);
+			this->groupBox2->Controls->Add(this->label23);
+			this->groupBox2->Controls->Add(this->label22);
+			this->groupBox2->Controls->Add(this->label26);
+			this->groupBox2->Controls->Add(this->label24);
+			this->groupBox2->Controls->Add(this->label21);
+			this->groupBox2->Controls->Add(this->label20);
+			this->groupBox2->Controls->Add(this->label29);
 			this->groupBox2->Controls->Add(this->pictureBox4);
+			this->groupBox2->Controls->Add(this->label28);
 			this->groupBox2->Controls->Add(this->pictureBox3);
 			this->groupBox2->Controls->Add(this->pictureBox2);
 			this->groupBox2->Controls->Add(this->pictureBox1);
@@ -541,25 +571,116 @@ namespace CHMlab1 {
 			this->groupBox2->Controls->Add(this->label6);
 			this->groupBox2->Location = System::Drawing::Point(490, -2);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(552, 216);
+			this->groupBox2->Size = System::Drawing::Size(710, 216);
 			this->groupBox2->TabIndex = 13;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Справка";
 			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(240, 130);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(10, 13);
+			this->label27->TabIndex = 49;
+			this->label27->Text = L"-";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(180, 130);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(42, 13);
+			this->label25->TabIndex = 48;
+			this->label25->Text = L"при x =";
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Location = System::Drawing::Point(55, 130);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(10, 13);
+			this->label23->TabIndex = 47;
+			this->label23->Text = L"-";
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(5, 130);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(49, 13);
+			this->label22->TabIndex = 46;
+			this->label22->Text = L"min |S| = ";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(240, 111);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(10, 13);
+			this->label26->TabIndex = 45;
+			this->label26->Text = L"-";
+			//this->label26->Click += gcnew System::EventHandler(this, &MyForm::label26_Click);
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(180, 111);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(42, 13);
+			this->label24->TabIndex = 44;
+			this->label24->Text = L"при x =";
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(55, 111);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(10, 13);
+			this->label21->TabIndex = 43;
+			this->label21->Text = L"-";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(5, 111);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(52, 13);
+			this->label20->TabIndex = 42;
+			this->label20->Text = L"max |S| = ";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Location = System::Drawing::Point(78, 92);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(10, 13);
+			this->label29->TabIndex = 41;
+			this->label29->Text = L"-";
+			// 
 			// pictureBox4
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(188, 77);
+			this->pictureBox4->Location = System::Drawing::Point(346, 81);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(364, 106);
 			this->pictureBox4->TabIndex = 16;
 			this->pictureBox4->TabStop = false;
 			this->pictureBox4->Visible = false;
 			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Location = System::Drawing::Point(6, 92);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(66, 13);
+			this->label28->TabIndex = 40;
+			this->label28->Text = L"max |OLP| = ";
+			// 
 			// pictureBox3
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(509, 13);
+			this->pictureBox3->Location = System::Drawing::Point(678, 0);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(32, 28);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -569,7 +690,7 @@ namespace CHMlab1 {
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(188, 77);
+			this->pictureBox2->Location = System::Drawing::Point(346, 81);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(366, 108);
 			this->pictureBox2->TabIndex = 14;
@@ -579,7 +700,7 @@ namespace CHMlab1 {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(336, 13);
+			this->pictureBox1->Location = System::Drawing::Point(498, 5);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(206, 146);
 			this->pictureBox1->TabIndex = 5;
@@ -633,7 +754,7 @@ namespace CHMlab1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1044, 557);
+			this->ClientSize = System::Drawing::Size(1202, 557);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->chart1);
@@ -784,6 +905,11 @@ namespace CHMlab1 {
 					int c1O = 0;
 					int c2O = 0;
 					int i = 1;
+					double maxOLP = 0.0;
+					double maxS = 0.0;
+					double minS = 10000000000000;
+					double xMinS;
+					double xMaxS;
 					bool f = true;
 					double vG = v01;
 					double xH = x0;
@@ -821,15 +947,25 @@ namespace CHMlab1 {
 						k4 = FuncDU(x0 + step, vH + step/2.0 * k3);
 
 						v2 = vH + step / 12.0 * (k1 + 2 * k2 + 2 * k3 + k4);
-						//rude
-						double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0;
-						k1_1 = FuncDU(x0, vG);
-						k2_2 = FuncDU(x0 + step / 3.0, vG + step / 3.0 * k1_1);
-						k3_3 = FuncDU(x0 + 2.0 / 3.0 * step, vG + 2.0 / 3.0 * step * k2_2);
-						vG = vG + step * (1.0 / 4.0 * k1_1 + 3.0 / 4.0 * k3_3);
+						////rude
+						//double k1_1 = 0.0, k2_2 = 0.0, k3_3 = 0.0;
+						//k1_1 = FuncDU(x0, vG);
+						//k2_2 = FuncDU(x0 + step / 3.0, vG + step / 3.0 * k1_1);
+						//k3_3 = FuncDU(x0 + 2.0 / 3.0 * step, vG + 2.0 / 3.0 * step * k2_2);
+						//vG = vG + step * (1.0 / 4.0 * k1_1 + 3.0 / 4.0 * k3_3);
 
 						// check error
 						s = (v2 - v0Ch)/15.0;
+						if (fabs(s) < minS)
+						{
+							minS = fabs(s);
+							xMinS = x0;
+						}
+						if (fabs(s) > maxS)
+						{
+							maxS = fabs(s);
+							xMaxS = x0;
+						}
 						double fs = fabs(s);
 						if (eps / (32.0) <= fs && eps >= fs)
 						{
@@ -856,6 +992,10 @@ namespace CHMlab1 {
 						}
 						double olp;
 						olp = s * 16.0;
+						if (fabs(s) > maxOLP) {
+							maxS = fabs(s);
+							maxOLP = fabs(s);
+						}
 						//table
 						dataGridView1->Rows->Add(1);
 						dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
@@ -867,7 +1007,7 @@ namespace CHMlab1 {
 						dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 						dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 						dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-						dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  // !
+						dataGridView1->Rows[i]->Cells[5]->Value = fabs((olp*0.1)).ToString();  // !
 						dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 						c1 = 0;
 						c2 = 0;
@@ -877,6 +1017,11 @@ namespace CHMlab1 {
 						{
 							f = false;
 							chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
+							label29->Text = System::Convert::ToString(maxOLP * 0.1);
+							label21->Text = System::Convert::ToString(maxS);
+							label26->Text = System::Convert::ToString(xMaxS);
+							label23->Text = System::Convert::ToString(minS);
+							label27->Text = System::Convert::ToString(xMinS);
 						}
 					}
 					/*int c1 = 0;
@@ -1029,6 +1174,12 @@ namespace CHMlab1 {
 				double vH = v01;
 				double s, v2;
 				double v0Ch = v01;
+				double maxOLP = 0.0;
+				double maxS = 0.0;
+				//double maxS = 0.0;
+				double minS = 10000000000000;
+				double xMinS;
+				double xMaxS;
 				dataGridView1->Rows->Add(1);
 				dataGridView1->Rows[0]->Cells[1]->Value = x0.ToString();
 				dataGridView1->Rows[0]->Cells[2]->Value = v01.ToString();
@@ -1067,6 +1218,17 @@ namespace CHMlab1 {
 					k3_3 = FuncMain_1(x0 + 2.0 / 3.0 * step, vG + 2.0 / 3.0 * step * k2_2);
 					vG = vG + step * (1.0 / 4.0 * k1_1 + 3.0 / 4.0 * k3_3);
 
+					s = (v2 - v0Ch) / 15.0;
+					if (fabs(s) < minS)
+					{
+						minS = fabs(s);
+						xMinS = x0;
+					}
+					if (fabs(s) > maxS)
+					{
+						maxS = fabs(s);
+						xMaxS = x0;
+					}
 					// check error
 					s = (v2 - v0Ch);
 					double fs = fabs(s);
@@ -1097,6 +1259,10 @@ namespace CHMlab1 {
 						}
 					double olp;
 					olp = s * 16.0;
+					if (fabs(s) > maxOLP) {
+						maxS = fabs(s);
+						maxOLP = fabs(s);
+					}
 					//table
 					dataGridView1->Rows->Add(1);
 					dataGridView1->Rows[i]->Cells[0]->Value = i.ToString();
@@ -1108,7 +1274,7 @@ namespace CHMlab1 {
 					//dataGridView1->Rows[i]->Cells[9]->Value = exp(x0).ToString();
 					dataGridView1->Rows[i]->Cells[7]->Value = c1.ToString();
 					dataGridView1->Rows[i]->Cells[8]->Value = c2.ToString();
-					dataGridView1->Rows[i]->Cells[5]->Value = s.ToString();  // !
+					dataGridView1->Rows[i]->Cells[5]->Value = fabs((olp*0.1)).ToString();  // !
 					//dataGridView1->Rows[i]->Cells[10]->Value = fabs((exp(x0) - v01)).ToString();
 					c1 = 0;
 					c2 = 0;
@@ -1118,6 +1284,11 @@ namespace CHMlab1 {
 					{
 						f = false;
 						chart1->Series["Series1"]->Points->AddXY(x0, v0Ch);
+						label29->Text = System::Convert::ToString(maxOLP * 0.1);
+						label21->Text = System::Convert::ToString(maxS);
+						label26->Text = System::Convert::ToString(xMaxS);
+						label23->Text = System::Convert::ToString(minS);
+						label27->Text = System::Convert::ToString(xMinS);
 					}
 					textBox6->Text = System::Convert::ToString(c2O);
 					textBox7->Text = System::Convert::ToString(c1O);
@@ -1669,10 +1840,13 @@ namespace CHMlab1 {
 		pictureBox1->Visible = false;
 		pictureBox2->Visible = false;
 		pictureBox4->Visible = false;
+		label29->Text = " ";
 		//comboBox1->SelectedIndex = -1;
 		//comboBox2->SelectedIndex = -1;
 		
 		//dataGridView1->Columns->Clear();
 	}
+
+
 };
 }

@@ -1,0 +1,5 @@
+C:\Users\user\Desktop\programs\CHM\CHM\Debug\CHM.vcxprojAssemblyReference.cache
+C:\Users\user\Desktop\programs\CHM\CHM\Debug\CHM.MyForm.resources
+C:\Users\user\Desktop\programs\CHM\CHM\Debug\CHM.vcxproj.GenerateResource.cache
+C:\Users\user\Desktop\programs\CHM\CHM\Debug\CHM.about1.resources
+C:\Users\user\Desktop\programs\CHM\CHM\Debug\CHM.about2.resources
