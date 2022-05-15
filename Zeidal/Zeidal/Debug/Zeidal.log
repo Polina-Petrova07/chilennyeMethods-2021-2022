@@ -1,5 +1,5 @@
 ﻿  Zeidal.cpp
-C:\Users\user\Desktop\programs\Zeidal\Zeidal\Zeidal.cpp(65,23): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Users\user\Desktop\programs\Zeidal\Zeidal\Zeidal.cpp(67,11): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\user\Desktop\programs\Zeidal\Zeidal\Zeidal.cpp(69,14): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-  Zeidal.vcxproj -> C:\Users\user\Desktop\programs\Zeidal\Debug\Zeidal.exe
+C:\Users\user\tets1\Zeidal\Zeidal\Zeidal.cpp(65,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\tets1\Zeidal\Zeidal\Zeidal.cpp(67,11): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
+C:\Users\user\tets1\Zeidal\Zeidal\Zeidal.cpp(69,14): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
+  Zeidal.vcxproj -> C:\Users\user\tets1\Zeidal\Debug\Zeidal.exe

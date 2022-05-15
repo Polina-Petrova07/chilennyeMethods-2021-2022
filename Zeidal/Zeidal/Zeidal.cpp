@@ -1,4 +1,4 @@
-﻿// Zeidal.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Copyright Petrova Polina 2021
 //
 
 #include <iostream>
