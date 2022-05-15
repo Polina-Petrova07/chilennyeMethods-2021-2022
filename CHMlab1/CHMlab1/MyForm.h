@@ -544,6 +544,7 @@ namespace CHMlab1 {
 			this->chart1->Size = System::Drawing::Size(710, 332);
 			this->chart1->TabIndex = 4;
 			this->chart1->Text = L"chart1";
+			//this->chart1->Click += gcnew System::EventHandler(this, &MyForm::chart1_Click);
 			// 
 			// groupBox2
 			// 
@@ -620,7 +621,6 @@ namespace CHMlab1 {
 			this->label26->Size = System::Drawing::Size(10, 13);
 			this->label26->TabIndex = 45;
 			this->label26->Text = L"-";
-			//this->label26->Click += gcnew System::EventHandler(this, &MyForm::label26_Click);
 			// 
 			// label24
 			// 
@@ -1846,6 +1846,7 @@ namespace CHMlab1 {
 		
 		//dataGridView1->Columns->Clear();
 	}
+
 
 
 };

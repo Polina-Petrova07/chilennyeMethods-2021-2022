@@ -1,0 +1,3 @@
+C:\Users\user\Desktop\programs\MVR\MVR\Debug\MVR.vcxprojAssemblyReference.cache
+C:\Users\user\Desktop\programs\MVR\MVR\Debug\MVR.MyForm.resources
+C:\Users\user\Desktop\programs\MVR\MVR\Debug\MVR.vcxproj.GenerateResource.cache
