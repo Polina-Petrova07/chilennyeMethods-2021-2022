@@ -1,5 +1,5 @@
+// Copyrighting Polya Busko
 #pragma once
-
 // #include «stdafx.h»
 #include <iostream>
 #include <fstream>
@@ -1073,7 +1073,7 @@ namespace MVR {
 			   this->ClientSize = System::Drawing::Size(1059, 613);
 			   this->Controls->Add(this->tabControl1);
 			   this->Name = L"MyForm";
-			   this->Text = L"Метод Верхней релаксации, вариант 4";
+			   this->Text = L"Метод Верхней релаксации, вариант 4 // Copyrighting Polya Busko";
 			   this->tabControl1->ResumeLayout(false);
 			   this->tabPage1->ResumeLayout(false);
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
