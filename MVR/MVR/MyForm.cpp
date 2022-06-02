@@ -1,3 +1,4 @@
+// Copyrighting Polya Busko
 #include "MyForm.h"
 
 using namespace MVR;
